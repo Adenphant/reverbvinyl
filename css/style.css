@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Source Sans 3', sans-serif;
-    font: 'Source Sans 3';
+    font-family: 'Lato', sans-serif;
+    font: 'Lato';
 }
 body {
     background-color: #0F0F0F;
@@ -17,7 +18,7 @@ h1, h2 {
     text-align: center;
 }
 h3 {
-    font: lighter 1.2em source-sans-pro, sans-serif;
+    font: lighter 1.5em Lato, sans-serif;
 }
 h4 {
     font: bold 1.5em Bitter, serif;
@@ -39,6 +40,9 @@ a:hover {
 .flex{
     display: flex;
     justify-content: space-between;
+}
+.flex2{
+    display: flex;
 }
 /* Header */
 header {
@@ -65,7 +69,7 @@ header {
     display: block;
     padding: 20px 30px 0;
     color:#ffffff;
-    font: 22px source-sans-pro, sans-serif;
+    font: 22px Lato, sans-serif;
 }
 .header-links a:hover{
     text-decoration: underline;
@@ -119,12 +123,12 @@ article{
 }
 .album-title {
     display: block;
-    font: 16px source-sans-pro, sans-serif;
+    font: 16px Lato, sans-serif;
     font-weight: 600;
     padding-bottom: 2px;
 }
 .artist-title {
-    font: 14px source-sans-pro, sans-serif;
+    font: 14px Lato, sans-serif;
 }
 .main-btn{
     margin-top: 50px;
@@ -167,9 +171,15 @@ article{
 #detailView h1{
     text-align: left;
 }
+
+.detailWrapper p {
+    margin: 15px 0;
+    line-height: 1.3em;
+    font-weight: 300;
+}
 #detailView img {margin: 10px 0;}
 
-#detailView strong{
+.detailWrapper strong{
     font-size: 1.2em;
     font-weight: 700;
 }
@@ -177,7 +187,8 @@ article{
 
 #detailPrice{
     font-size: 1.8em;
-    margin: 5px 0 10px;
+    margin: 0.5em 0 0.5em;
+    font-weight: 400;
 }
 .red {color: red;}
 
@@ -185,8 +196,10 @@ article{
 
 .green {color: green;}
 
+/* Product details/tracklist section */
+
 #albumDetailsContainer{
-    margin: 20px 0;
+    margin: 50px 0 20px;
     width: 100%;
     display: flex;
 }
@@ -209,12 +222,24 @@ article{
     border: 2px solid white;
     border-style: none none solid none;
 }
-#tracklist {
-    display: block;
+#detailView li{
+    line-height: 2em;
 }
+#productKeys li{
+    font-weight: 700;
+    margin-right: 50px;
+}
+
+#productKeys li{
+    font-weight: 700;
+    margin-right: 50px;
+}
+/* #tracklist {
+    display: block;
+} */
 #productDetails{
-    display: none;
     display: flex;
+    display: none;
     align-items: flex-start;
 }
 #detailView h2{
@@ -254,7 +279,7 @@ article{
         font-size: 3em;
     }
     h3 {
-        font-size: 1.6em;
+        font-size: 2em;
     }
     .gridcontainer2{
         grid-template-columns: 1fr 1fr;

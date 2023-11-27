@@ -75,41 +75,47 @@ function showDetailView(id) {
       <button onclick="showProductDetails()" class="rightButton">Details</button>
     </div>
     <div class="detailWrapper">
-      <div id="tracklist" >`
+      <div id="tracklist" >
+      <ul>`
     for (let i = 0; i < record.tracks.length; i++) {
       html += /*html*/`
-            <p>${[i + 1]}. ${record.tracks[i]}</p>
+            <li>${[i + 1]}. ${record.tracks[i]}</li>
       `;
     }
     html += /*html*/`
+      </ul>
       </div>
       <div id="productDetails">
-        <ul id="productKeys">
-          <li>Artist</li>
-          <li>Title</li>
-          <li>Producer(s)</li>
-          <li>Release</li>
-          <li>Duration</li>
-          <li>Genre</li>
-          <li>Style</li>
-          <li>Location</li>
-          <li>Label</li>
-          <li>Condition</li>
-          <li>In Stock</li>
-        </ul>
-        <ul id="productValues">
-          <li>${record.artistName}</li>
-          <li>${record.albumTitle}</li>
-          <li>${record.producers}</li>
-          <li>${record.}</li>
-          <li>${record.}</li>
-          <li>${record.}</li>
-          <li>${record.}</li>
-          <li>${record.}</li>
-          <li>${record.}</li>
-        </ul>
+        <div class="flex2">
+          <ul id="productKeys">
+            <li>Artist</li>
+            <li>Title</li>
+            <li>Producer(s)</li>
+            <li>Release</li>
+            <li>Duration</li>
+            <li>Genre</li>
+            <li>Style</li>
+            <li>Location</li>
+            <li>Label</li>
+            <li>Condition</li>
+            <li>In Stock</li>
+          </ul>
+          <ul id="productValues">
+            <li>${record.artistName}</li>
+            <li>${record.albumTitle}</li>
+            <li>${record.producers}</li>
+            <li>${record.release}</li>
+            <li>${record.duration}</li>
+            <li>${record.genre}</li>
+            <li>${record.style}</li>
+            <li>${record.location}</li>
+            <li>${record.label}</li>
+            <li>${record.condition}</li>
+            <li>${record.inStock}</li>
+          </ul>
+        </div>
       </div>
-      </div>
+    </div>
     <h2>We also recommend</h2>
     <div class="gridcontainer">`
     let records = _records;
