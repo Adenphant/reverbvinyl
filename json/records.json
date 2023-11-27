@@ -1,0 +1,312 @@
+[
+    {
+        "id": 1,
+        "albumTitle": "Wish You Were Here",
+        "artistName": "Pink Floyd",
+        "genre": "Rock",
+        "style": ["Progressive Rock", "Art Rock", "Experimental Rock"],
+        "producers": "Pink Floyd",
+        "duration": "44:13",
+        "label": "Columbia Records",
+        "price": 250,
+        "description": "Wish You Were Here is the ninth studio album by the English rock band Pink Floyd, recorded 13 January – 28 July 1975 and released on 12 September 1975. The album's lyrical themes concern alienation and criticism of the music business. The bulk of the album is taken up by 'Shine On You Crazy Diamond', a nine-part tribute to founding member Syd Barrett, who left the band seven years earlier due to his deteriorating mental health.",
+        "soloArtist": false,
+        "members": 
+        [
+            {
+                "name": "David Gilmour",
+                "instrument": ["Lead Vocals", "Guitar", "Composer"]
+            },
+            {
+                "name": "Roger Waters",
+                "instrument": ["Lead Vocals", "Guitar (Bass)", "Composer", "Lyricist"]
+            },
+            {
+                "name": "Nick Mason",
+                "instrument": "Drums"
+            },
+            {
+                "name": "Richard Wright",
+                "instrument": ["Keyboards", "Pianist", "Composer", "Vocals"]
+            }
+        ],
+        "releaseDate": [{"year": 1975, "month": "September", "day": 12}],
+        "condition": "Mint",
+        "tracks":[
+            "Shine on You Crazy Diamond, Pts. 1-5", 
+            "Welcome to the Machine", 
+            "Have a Cigar", 
+            "Wish You Were Here", 
+            "Shine on You Crazy Diamond, Pts. 6-9"],
+        "albumCover": "image/albumcovers/wishyouwerehere.jpeg",
+        "inStock": 1,
+        "discogsLink": "https://www.discogs.com/master/11703-Pink-Floyd-Wish-You-Were-Here"
+    },
+    {
+        "id": 2,
+        "albumTitle": "What's Going On",
+        "artistName": "Marvin Gaye",
+        "genre": "Soul",
+        "style": ["Progressive Soul", "Psychedelic Soul"],
+        "producers":"Marvin Gaye",
+        "duration": "35:32",
+        "label": "Tarnia",
+        "price": 329,
+        "description": "What's Going On is the eleventh studio album by American soul singer Marvin Gaye. It was released on May 21, 1971. What's Going On is a concept album with most of its songs segueing into the next and has been categorized as a song cycle. The narrative established by the songs is told from the point of view of a Vietnam veteran returning to his home country to witness hatred, suffering, and injustice.",
+        "soloArtist": true,
+        "members": 
+        {
+            "name": "Marvin Gaye",
+            "instrument": ["Vocals", "Composer", "Drums", "Piano", "Producer", "Keyboards"]
+        },
+        "releaseDate": [{"year": 1971, "month": "May", "day": 20}],
+        "condition": "Mint",
+        "tracks":[
+            "What's Going On",
+            "What's Happening Brother",
+            "Flyin' High (In The Friendly Sky)",
+            "Save The Children",
+            "God Is Love",
+            "Mercy Mercy Me (The Ecology",
+            "Right On",
+            "Wholy Holy",
+            "Inner City Blues (Make Wanna Holler)"
+        ],
+        "albumCover": "image/albumcovers/whatsgoingon.jpeg",
+        "inStock": 3,
+        "discogsLink": "https://www.discogs.com/sell/item/2802515014"
+    },
+    {
+        "id": 3,
+        "albumTitle": "Mama's Gun",
+        "artistName": "Erykah Badu",
+        "genre": ["RnB", "Jazz", "Neo-Soul"],
+        "style": ["Alternative RnB", "Neo-Seol"],
+        "producers": ["Erykah Badu", "Questlove"],
+        "duration": "1:11:50",
+        "label": "Motown",
+        "price": 200,
+        "description": "Mama's Gun is the second studio album by American singer Erykah Badu. It was recorded between 1999 and 2000 at Electric Lady Studios in New York and released on November 21, 2000. A neo soul album, Mama's Gun incorporates elements of funk, soul, and jazz styles.[2] It has confessional lyrics by Badu, which cover themes of insecurity, personal relationships, and social issues.A neo soul album, Mama's Gun incorporates elements of funk, soul, and jazz styles.[2] It has confessional lyrics by Badu, which cover themes of insecurity, personal relationships, and social issues.",
+        "soloArtist": true,
+        "members": 
+        {
+            "name": "Erykah Badu",
+            "instrument": ["Primary Artist", "Composer", "Writer"]
+        },
+        "release": 2000,
+        "condition": "Mint",
+        "tracks":[
+            "Penitentiary Philosophy",
+            "Didn't Cha Know",
+            "My Life",
+            "... & On",
+            "Cleva",
+            "Hey Sugah",
+            "Booty",
+            "Kiss Me On My Neck (Hesi)",
+            "A.D. 2000",
+            "Orange Moon",
+            "In Love With You",
+            "Bag Lady",
+            "Time's A Wastin'",
+            "Green Eyes"
+        ],
+        "albumCover": "image/albumcovers/mamasgun.jpeg",
+        "inStock": 0,
+        "discogsLink": "https://www.discogs.com/master/68130-eryKahBadu-Mamas-Gun"
+    },
+    {
+        "id": 4,
+        "albumTitle": "To Pimp a Butterfly",
+        "artistName": "Kendrick Lamar",
+        "genre": ["Hip Hop", "Rap"],
+        "style": ["Experimental Hip Hop", "Jazz Rap", "Neo Soul", "G-funk", "Conscious Hip Hop"],
+        "producers": ["Flying Lotus", "Thundercat", "Sounwave", "Terrace Martin", "Taz Arnold"],
+        "duration": "1:18:51",
+        "label": "TDE",
+        "price": 450,
+        "description": "To Pimp a Butterfly is the third studio album by American rapper Kendrick Lamar. It was released on March 15, 2015. Primarily a hip hop album, To Pimp a Butterfly incorporates numerous other musical styles spanning the history of African-American music, most prominently jazz, funk, and soul. Lyrically, it features political commentary and personal themes concerning African-American culture, racial inequality, depression, and institutional discrimination. This thematic direction was inspired by Lamar's tour of historic sites during his visit to South Africa, such as Nelson Mandela's jail cell on Robben Island.",
+        "soloArtist": true,
+        "members": 
+        {
+            "name": "Kendrick Lamar",
+            "instrument": ["Primary Artist", "Composer", "Writer"]
+        },
+        "releaseDate": [{"year": 2015, "month": "March", "day": 16}],
+        "condition": "Mint",
+        "tracks":[
+            "Wesley's Theory",
+            "For Free? [Interlude]",
+            "King Kunta",
+            "Institutionalized",
+            "These Walls",
+            "u",
+            "Alright",
+            "For Sale? [Interlude]",
+            "Momma",
+            "Hood Politics",
+            "How Much a Dollar Cost?",
+            "Complexion (A Zulu Love)",
+            "The Blacker the Berry",
+            "You Ain't Gotta Lie (Momma Said)",
+            "i",
+            "Mortal Man"
+        ],
+        "albumCover": "image/albumcovers/tpab.jpeg",
+        "inStock": 0,
+        "discogsLink": "https://www.discogs.com/sell/item/2632504140"
+    },
+    {
+        "id": 5,
+        "albumTitle": "Voodoo",
+        "artistName": "D'Angelo",
+        "genre": ["RnB", "Funk", "Neo-Soul", "Soul"],
+        "style": ["Jazz", "Neo-Seol"],
+        "producers": ["Erykah Badu", "Questlove"],
+        "duration": "1:18:53",
+        "label": "Virgin",
+        "lokation": "Electric Lady Studios, New York",
+        "price": 401,
+        "description": "Voodoo is the second studio album by American singer, songwriter, and multi-instrumentalist D'Angelo, released on January 25, 2000. Produced primarily by the singer, Voodoo features a loose, groove-based funk sound and serves as a departure from the more conventional song structure of his debut album, Brown Sugar (1995). Its lyrics explore themes of spirituality, love, sexuality, maturation, and fatherhood.",
+        "soloArtist": true,
+        "members": 
+        {
+            "name": "D'Angelo",
+            "instrument": ["Primary Artist", "Composer", "Writer"]
+        },
+        "release": 2000,
+        "condition": "Mint",
+        "tracks":[
+            "Playa Playa",
+            "Devil's Pie",
+            "Left & Right",
+            "The Line",
+            "Send It On",
+            "Chicken Grease",
+            "One Mo'gin",
+            "The Root",
+            "Spanish Joint",
+            "Feel Like Makin' Love",
+            "Greatdayndamornin' / Booty",
+            "Untitled (How Does It Feel)",
+            "Africa"
+        ],
+        "albumCover": "image/albumcovers/voodoo.jpeg",
+        "inStock": 0,
+        "discogsLink": "https://www.discogs.com/master/151766-DAngelo-Voodoo"
+    },
+    {
+        "id": 6,
+        "albumTitle": "Settle",
+        "artistName": "Disclosure",
+        "genre": ["Electronic", "House"],
+        "style": ["Club/Dance", "UK Garage"],
+        "producers": "Disclosure",
+        "duration": "1:01:00",
+        "label": "PMR",
+        "lokation": "London",
+        "price": 201,
+        "description": "Settle is the debut studio album by English electronic music duo Disclosure, released on June 3, 2013. The brothers behind Disclosure, Howard and Guy Lawrence, seem impossibly young considering their talents: Guy is 21, while younger brother Howard just turned 18 a few weeks ago. But they've actually been on the scene for three years, and their artistic growth over that period is impressive.",
+        "soloArtist": false,
+        "members": [
+        {
+            "name": "Guy Lawrence",
+            "instrument": ["Primary Artist", "Composer"]
+        },
+        {
+            "name": "Howard Lawrence",
+            "instrument": ["Primary Artist", "Composer"]
+        }],
+        "release": 2013,
+        "condition": "Mint",
+        "tracks":[
+            "Intro",
+            "When A Fire Starts To Burn",
+            "Latch",
+            "F For You",
+            "White Noise",
+            "Defeated No More",
+            "Stimulation",
+            "Voices",
+            "Second Chance",
+            "Grab Her",
+            "You & Me",
+            "January",
+            "Confess To Me",
+            "Help Me Lose My Mind"
+        ],
+        "albumCover": "image/albumcovers/settle.jpeg",
+        "inStock": 0,
+        "discogsLink": "https://www.discogs.com/master/561828-Disclosure-Settle"
+    },
+    {
+        "id": 7,
+        "albumTitle": "OK Computer",
+        "artistName": "Radiohead",
+        "genre": ["Pop/Rock", "Rock"],
+        "style": ["Alt Rock", "Electronic"],
+        "producers": ["Radiohead", "Nigel Godrich"],
+        "duration": "53:21",
+        "label": "Parlophone/Capitol",
+        "lokation": "Canned Applause, Didcot, England",
+        "price": 421,
+        "description":"OK Computer is the third studio album by the English rock band Radiohead, released in the UK on 16 June 1997. They distanced themselves from the guitar-centred, lyrically introspective style of their previous album, The Bends. OK Computer's abstract lyrics, densely layered sound and eclectic influences laid the groundwork for Radiohead's later, more experimental work.",
+        "soloArtist": false,
+        "members": "",
+        "release": 1997,
+        "condition": "Mint",
+        "tracks":[
+            "Airbag",
+            "Paranoid Android",
+            "Subterranean Homesick Alien",
+            "Exit Music (For A Film)",
+            "Let Down",
+            "Karma Police",
+            "Fitter Happier",
+            "Electioneering",
+            "Climbing Up The Walls",
+            "No Surprises",
+            "Lucky",
+            "The Tourist"
+        ],
+        "albumCover": "image/albumcovers/okcomputer.jpeg",
+        "inStock": 0,
+        "discogsLink": "https://www.discogs.com/master/21491-Radiohead-OK-Computer"
+    },
+    {
+        "id": 8,
+        "albumTitle": "Midnight Marauders",
+        "artistName": "A Tribe Called Quest",
+        "genre": ["Rap/Hip-Hop"],
+        "style": ["Jazz-Rap", "East Coast Rap"],
+        "producers": ["Q-Tip", "Large Professor", "Ali Shaheed Muhammad"],
+        "duration": "51:12",
+        "label": "Jive",
+        "lokation": "Battery Studios in New York City",
+        "price": 321,
+        "description": "Midnight Marauders is the third studio album by American hip hop group A Tribe Called Quest, released on November 9, 1993. A culmination of the group's two previous albums, People's Instinctive Travels and the Paths of Rhythm and The Low End Theory, it features an eclectic, gritty sound based on jazz, funk, soul and R&B samples, in addition to socially conscious, positively-minded, and humorous lyrics.",
+        "soloArtist": false,
+        "members": "",
+        "release": 1993,
+        "condition": "Mint",
+        "tracks":[
+            "Midnight Marauders Tour Guide",
+            "Steve Biko (Stir It Up",
+            "Award Tour",
+            "8 Million Stories",
+            "Sucka Nigga",
+            "Midnight",
+            "We Can Get Down",
+            "Electric Relaxation",
+            "Clap Your Hands",
+            "Oh My God",
+            "Keep It Rollin'",
+            "The Chase, Part II",
+            "Lyrics To Go",
+            "God Lives Through"
+        ],
+        "albumCover": "image/albumcovers/midnightmarauders.jpeg",
+        "inStock": 4,
+        "discogsLink": "https://www.discogs.com/sell/item/2675078619"
+    }
+]

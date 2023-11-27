@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans 3', sans-serif;
+    font: 'Source Sans 3';
+}
+body {
+    background-color: #0F0F0F;
+    /* background-color: black; */
+    color: #ffffff
+}
+h1, h2 {
+    font: bold 2em Bitter, serif;
+    color: #C2995C;
+    text-align: center;
+}
+h3 {
+    font: lighter 1.2em source-sans-pro, sans-serif;
+}
+h4 {
+    font: bold 1.5em Bitter, serif;
+    color: #C2995C;
+}
+li{
+    list-style-type: none;
+}
+img{
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    text-decoration: underline;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: #0F0F0F;
+}
+.header{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    color:#ffffff;
+}
+.header img{
+    max-width: 250px;
+}
+.header-links{
+    display: flex;
+}
+.header-links a{
+    display: block;
+    padding: 20px 30px 0;
+    color:#ffffff;
+    font: 22px source-sans-pro, sans-serif;
+}
+.header-links a:hover{
+    text-decoration: underline;
+}
+/* Main______________________ */
+article{
+    display: block;
+    padding: 5em 0;
+    margin: 50px 0;
+}
+
+/* ---------- page styling ---------- */
+.page {
+    display: none;
+    /*min heigh is screen heigh minus height of tab and top bar */
+    min-height: calc(100vh - 110px);
+    /* padding equals height of tabbar and topbar */
+    padding: 100px 0;
+  }
+
+/* Cover image on index.html */
+.index-cover{
+    display: block;
+    background-image: url("../image/front2.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 800px;
+    height: 90%;
+}
+#main-reverb-recommends{
+    margin: 0 auto;
+    text-align: center;
+}
+.index-albums{
+    display: block;
+    margin-bottom: 50px;
+}
+.gridcontainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    margin: 1em;
+}
+.album {
+    display: block;
+    /* width: 23%; */
+    /* padding: 2em 1em; */
+    text-align: left;
+}
+.album-title {
+    display: block;
+    font: 16px source-sans-pro, sans-serif;
+    font-weight: 600;
+    padding-bottom: 2px;
+}
+.artist-title {
+    font: 14px source-sans-pro, sans-serif;
+}
+.main-btn{
+    margin-top: 50px;
+    padding: 10px 30px;
+    font: bold 20px Bitter, serif;
+    background-color: #C2995C;
+    color: #0F0F0F;
+}
+/* Index banner */
+#index-banner{
+    display: block;
+    background-image: url("../image/ben1-1.png");
+    background-size: cover;
+    text-align: center;
+    padding: 5em 0;
+}
+#index-banner img{
+    max-width: 150px;
+}
+
+    /* max-width: 1080px;
+    margin: 0 auto; */
+
+#index-banner-contents strong{
+    font: bold 1.4em Bitter, serif;
+}
+#index-banner-contents p{
+    font-size: 1.1em;
+}
+/* Who are we? */
+#reverb-vinyl-index img{
+    width: 60%;
+}
+#reverb-vinyl-index-contents div{
+    width: 38%;
+    font-size: 1.6em;
+}
+
+/* Detail View */
+#detailView h1{
+    text-align: left;
+}
+#detailView img {margin: 10px 0;}
+
+#detailView strong{
+    font-size: 1.2em;
+    font-weight: 700;
+}
+.detailWrapper{margin: 0 15px;}
+
+#detailPrice{
+    font-size: 1.8em;
+    margin: 5px 0 10px;
+}
+.red {color: red;}
+
+.regular{font-weight: 300;}
+
+.green {color: green;}
+
+#albumDetailsContainer{
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+}
+.active2{
+    font: bold;
+    font-size: 1.5em;
+}
+#albumDetailsContainer button{
+    width: 50%;
+    padding: 1em;
+    font-size: 1.1em;
+    color: white;
+    background-color: transparent;
+}
+.leftButton{
+    border: 2px solid white;
+    border-style: none solid solid none ;
+}
+.rightButton{
+    border: 2px solid white;
+    border-style: none none solid none;
+}
+#tracklist {
+    display: block;
+}
+#productDetails{
+    display: none;
+    display: flex;
+    align-items: flex-start;
+}
+#detailView h2{
+    margin-top: 50px;
+    /* color: white; */
+}
+/* Footer */
+.gridcontainer2{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+    margin: 1em;
+}
+#map {
+    height: 100%;
+}
+.footer-section{
+    /* width: 100%; */
+    margin: 0 auto;
+    text-align: center;
+    padding: 6% 0;
+}
+#openinghours {
+    display: flex;
+}
+#openinghours div {
+    text-align: left;
+}
+.margin-right{
+    margin-right: 2em;
+}
+  @media (min-width: 768px) {
+    .gridcontainer{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    h1, h2 {
+        font-size: 3em;
+    }
+    h3 {
+        font-size: 1.6em;
+    }
+    .gridcontainer2{
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer-section{
+        /* width: 100%; */
+        margin: 0 auto;
+        text-align: justify;
+    }
+    #index-banner-contents{
+        display: flex;
+        justify-content: space-between;
+    }
+  }
+  @media (min-width: 1080px) {
+    .album-title {
+        display: block;
+        font-size: 20px;
+        padding-bottom: 3px;
+    }
+    .artist-title {
+        font-size: 18px;
+    }
+    #index-banner-contents strong{
+        font: bold 1.8em Bitter, serif;
+    }
+    #index-banner-contents p{
+        font-size: 1.4em;
+    }
+    #index-banner img{
+        max-width: 200px;
+    }
+
+  }
+  @media (min-width: 1280px) {
+    .wrapper{
+        max-width: 1280px;
+        margin: 0 auto
+    }
+    .gridcontainer{
+       margin: 2em 0;
+    }
+    .gridcontainer2{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #index-banner img{
+        max-width: 225px;
+    }
+  }
