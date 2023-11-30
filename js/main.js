@@ -161,48 +161,19 @@ function showProductDetails(){
   } 
 }
 
-// function albumDetails(){
-//   let t = document.getElementById("tracklist");
-//   let p = document.getElementById("productDetails");
-//   if(t.style.display === "block" && p.style.display === "none"){
-//     t.style.display = "none";
-//     p.style.display === "block"
-//   } else {
-//     p.style.display = "none";
-//     t.style.display === "block"
-//   }
-// }
-
 // Records page append__________
 // Append til Records side + Sorter + Filter
 function appendRecords(records) {
   let html = "";
   for (const record of records) {
       html += /*html*/`
-          <article>
-            <img src="${record.albumCover}">
-            <p class="album-title">${record.albumTitle}</p>
-            <p class="artist-title">${record.artistName}</p>
-            <p>${record.id}</p>
-            <p>Condition: ${record.condition}</p>
-            <p>${record.description}</p>
-      `;
-      if (record.inStock > 0) {
-        html+=`
-        <p>Avalibility: <span class="green">In Stock</span></p>
-        `
-      } else{
-        html+=`
-        <p>Avalibility: Out of Stock</p>
-        `
-      }
-      for (let i = 0; i < record.tracks.length; i++) {
-        html += /*html*/`
-              <p>${[i + 1]}. ${record.tracks[i]}</p>
-        `;
-      }
-      html += /*html*/`
-      </article>
+      <div class="album">
+        <img src="${record.albumCover}" onclick="showDetailView('${record.id}')" alt="${record.albumTitle}">
+        <div>
+          <strong class="album-title">${record.albumTitle}</strong>
+          <p class="artist-title">${record.artistName}</p>
+        </div>
+      </div>
     `;
     // console.log(record.condition);
   }
@@ -210,23 +181,39 @@ function appendRecords(records) {
   document.querySelector(".records").innerHTML = html;
 }
 
-// if (!_selectedUserId) {
-//   navigateTo("users");
+// Sort by
+function orderBy(option){
+  if(option === "titleA"){
+    orderByAlbumtitleA();
+  } 
+  else if(option === "titleZ"){
+    orderByAlbumtitleZ();
+  }
+}
+
+function orderByAlbumtitleA(){
+  _records.sort((a, b) => {
+    return a.albumTitle.localCompare(b.albumTitle)
+  });
+  appendRecords(_records);
+}
+
+function orderByAlbumtitleZ(){
+  _records.sort((record1, record2) => {
+    return record1.albumTitle.localCompare(record2.albumTitle)
+  });
+  appendRecords(_records);
+}
+
+// function compareStrings(a, b) {
+//   // Assuming you want case-insensitive comparison
+
+//   return (a < b) ? -1 : (a > b) ? 1 : 0;
 // }
-// function appendAlbumsIndex(albums){
-//   let html = "";
-//   for (let i = 0; i < 1 && i < albums.length; i++) {
-//     for (const album of albums){
-//     html+=`
-//     <div class="album">
-//       <a href="index.html"><img src="${album.albumCover}" alt="${album.albumTitle}"></a>
-//       <div>
-//           <strong class="album-title">${album.albumTitle}</strong>
-//           <p class="artist-title">${album.artistName}</p>
-//       </div>
-//     </div>
-//     `
-//   }
-// }
-//   document.querySelector(".recordsIndex").innerHTML = html;
+// function orderByTitle(){
+//   _records.sort((a, b) => {
+//     a = a.toLowerCase();
+//     b = b.toLowerCase();
+//     return a.albumTitle < b.albumTitle ? -1 : a.albumTitle > b.albumTitle ? 1 : 0;
+//   });
 // }

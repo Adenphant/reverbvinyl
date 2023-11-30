@@ -102,7 +102,14 @@
             </article>
         </div>
         <div id="records" class="page">
-            <section class="records"></section>
+            <label for="sortBy">
+                <select id="sortBy" onchange="orderBy(this.value)">
+                    <option value="" selected >Sort by</option>
+                    <option value="titleA">Title A-Z</option>
+                    <option value="titleZ">Title Z-A</option>
+                </select>
+            </label>
+            <section class="records gridcontainer"></section>
         </div>
         <div id="detailView" class="page">
         </div>
