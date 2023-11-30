@@ -18,7 +18,18 @@
                 <a href="#contact">Contact</a>
             </div>
         </nav>
+        <div id="mobileheader">
+            <a href="#home" class=""active><img src="image/logo.png" alt="Reverb Vinyl"></a>
+            <input id="menu-toggle" type="checkbox" onclick="myFunction()">
+            <label for="menu-toggle">X</label>
+        </div>
+        <div id="header-links-mobile">
+            <a href="#records">Records</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
     </header>
+ 
     <main> 
         <div id="home" class="page">
             <div class="index-cover"></div>
@@ -101,14 +112,30 @@
                 </div>
             </article>
         </div>
-        <div id="records" class="page">
-            <label for="sortBy">
+        <div id="records" class="page wrapper">
+            <h2>Records</h2>
+            <!-- <label for="sortBy">
                 <select id="sortBy" onchange="orderBy(this.value)">
                     <option value="" selected >Sort by</option>
                     <option value="titleA">Title A-Z</option>
                     <option value="titleZ">Title Z-A</option>
                 </select>
+            </label> -->
+            <div class="filterandsearchcontainer">
+            <input id="searchRecords" type="search" placeholder="Search" onkeyup="search(this.value)" onsearch="search('')">
+            <label for="filterByGenre">
+                <select id="filterByGenre"  onchange="filterByGenre(this.value)">
+                    <option value="all" selected >All Genres</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Rap/Hip-Hop">Rap/Hip-Hop</option>
+                    <option value="Electronic">Electronic</option>
+                    <option value="Soul">Soul</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="RnB">RnB</option>
+                    <option value="Funk">Funk</option>
+                </select>
             </label>
+            </div>
             <section class="records gridcontainer"></section>
         </div>
         <div id="detailView" class="page">

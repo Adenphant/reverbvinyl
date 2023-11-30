@@ -46,14 +46,15 @@ function appendRecordsIndex(records){
 function showDetailView(id) {
   const record = _records.find(record => record.id == id);
   let html = "";
+
   html+=`
-    <section>
+    <section class="wrapper">
     <div class="detailWrapper">
-    <h1>${record.albumTitle}</h1>
-    <h3>${record.artistName}</h3>
     
-    <img src="${record.albumCover}" onclick="showDetailView('${record.id}')">
-    
+    <img src="${record.albumCover}" id="hideonmobile" onclick="showDetailView('${record.id}')">
+    <div id="detailAll">
+    <h1 class="hideonmobile">${record.albumTitle}</h1>
+    <h3 class="hideonmobile">${record.artistName}</h3>
     `
     if (record.inStock > 0) {
       html+=`
@@ -69,7 +70,7 @@ function showDetailView(id) {
     <p>${record.description}</p>
     <p id="detailPrice">${record.price} dkk</p>
     <a href="${record.discogsLink}" class="main-btn">Buy now</a>
-    </div>
+    
     <div id="albumDetailsContainer">
       <button onclick="showTracklist()" class="active2 leftButton">Tracklist</button>
       <button onclick="showProductDetails()" class="rightButton">Details</button>
@@ -115,6 +116,8 @@ function showDetailView(id) {
           </ul>
         </div>
       </div>
+    </div>
+    </div>
     </div>
     <h2>We also recommend</h2>
     <div class="gridcontainer">`
@@ -181,30 +184,81 @@ function appendRecords(records) {
   document.querySelector(".records").innerHTML = html;
 }
 
-// Sort by
-function orderBy(option){
-  if(option === "titleA"){
-    orderByAlbumtitleA();
-  } 
-  else if(option === "titleZ"){
-    orderByAlbumtitleZ();
+// Filter by Genre
+function filterByGenre(genre) {
+  // resetFilterByEnrollment();
+  if (genre === "all") {
+      appendRecords(_records);
+  } else {
+      const results = _records.filter(record => record.genre.includes(genre));
+      appendRecords(results);
   }
 }
 
-function orderByAlbumtitleA(){
-  _records.sort((a, b) => {
-    return a.albumTitle.localCompare(b.albumTitle)
+// Search by genre and artist
+function search(value) {
+  resetFilterByGenre();
+  value = value.toLowerCase();
+  const results = _records.filter(record => {
+      const album = record.albumTitle.toLowerCase();
+      const artist = record.artistName.toLowerCase();
+      // const genre = record.genre.some(value.includes(record.genre));
+      if (album.includes(value) || artist.includes(value)) {
+          return record;
+      }
   });
-  appendRecords(_records);
+  appendRecords(results);
 }
 
-function orderByAlbumtitleZ(){
-  _records.sort((record1, record2) => {
-    return record1.albumTitle.localCompare(record2.albumTitle)
-  });
-  appendRecords(_records);
+//reset array
+function resetFilterByGenre() {
+  document.querySelector("#filterByGenre").value = "all";
 }
 
+
+
+
+
+// HEADER__________
+function myFunction() {
+  // Get the checkbox
+  let checkBox = document.getElementById("menu-toggle");
+  // Get the output text
+  let text = document.getElementById("#header-links-mobile");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+    text.style.display = "none";
+  }
+}
+
+
+// Sort by
+// function orderBy(option){
+//   if(option === "titleA"){
+//     orderByAlbumtitleA();
+//   } 
+//   else if(option === "titleZ"){
+//     orderByAlbumtitleZ();
+//   }
+// }
+
+// function orderByAlbumtitleA(){
+//   _records.sort((a, b) => {
+//     return a.albumTitle.localCompare(b.albumTitle)
+//   });
+//   appendRecords(_records);
+// }
+
+// function orderByAlbumtitleZ(){
+//   _records.sort((record1, record2) => {
+//     return record1.albumTitle.localCompare(record2.albumTitle)
+//   });
+//   appendRecords(_records);
+// }
+// Rap/Hip-Hop, Rock, Electronic, Soul, Jazz, RnB
 // function compareStrings(a, b) {
 //   // Assuming you want case-insensitive comparison
 

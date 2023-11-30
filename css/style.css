@@ -12,12 +12,15 @@ body {
     /* background-color: black; */
     color: #ffffff
 }
-h1, h2 {
+h1, h2{
     font: bold 2em Bitter, serif;
     color: #C2995C;
     text-align: center;
 }
-h3 {
+.likeh1{
+    font-weight: 700;
+}
+h3, .likeh3 {
     font: lighter 1.5em Lato, sans-serif;
 }
 h4 {
@@ -53,26 +56,24 @@ header {
     z-index: 9999;
     background-color: #0F0F0F;
 }
-.header{
-    padding: 20px 0;
+#mobileheader{
     display: flex;
     justify-content: space-between;
-    color:#ffffff;
+    padding: 10px;
 }
-.header img{
-    max-width: 250px;
+#mobileheader img{
+    max-width: 180px;
 }
-.header-links{
-    display: flex;
+
+#header-links-mobile{
+    display: none;
 }
-.header-links a{
-    display: block;
-    padding: 20px 30px 0;
-    color:#ffffff;
-    font: 22px Lato, sans-serif;
+
+#menu-toggle{
+    display: none;
 }
-.header-links a:hover{
-    text-decoration: underline;
+.header{
+    display: none;
 }
 /* Main______________________ */
 article{
@@ -88,6 +89,7 @@ article{
     min-height: calc(100vh - 110px);
     /* padding equals height of tabbar and topbar */
     padding: 100px 0;
+    margin: 0 0.6em;
   }
 
 /* Cover image on index.html */
@@ -113,7 +115,7 @@ article{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2em;
-    margin: 1em;
+    /* margin: 1em; */
 }
 .album {
     display: block;
@@ -132,7 +134,7 @@ article{
 }
 .main-btn{
     margin-top: 50px;
-    padding: 10px 30px;
+    padding: 15px 35px;
     font: bold 20px Bitter, serif;
     background-color: #C2995C;
     color: #0F0F0F;
@@ -167,7 +169,33 @@ article{
     font-size: 1.6em;
 }
 
-/* Detail View */
+/* ______Records Page_______ */
+#filterByGenre {
+    font-size: 1.1em;
+    padding: 10px 8px;
+    margin:5px 0 20px;
+    width: 100%;
+    min-width: 50%;
+    color: white;
+    background-color: #0F0F0F;
+    border: solid white 5px;
+}
+#filterByGenre option {
+    font-size:1.2em
+}
+#searchRecords{
+    display: block;
+    font-size: 1.1em;
+    padding: 10px 8px;
+    margin:20px 0 5px;
+    width: 100%;
+    /* color: white;
+    background-color: #0F0F0F; */
+    /* border: solid white 5px; */
+}
+
+
+/* ______Detail View________ */
 #detailView h1{
     text-align: left;
 }
@@ -194,7 +222,7 @@ article{
 
 .regular{font-weight: 300;}
 
-.green {color: green;}
+.green {color: lightgreen;}
 
 /* Product details/tracklist section */
 
@@ -272,13 +300,37 @@ article{
     margin-right: 2em;
 }
   @media (min-width: 768px) {
+    .header{
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        color:#ffffff;
+    }
+    .header img{
+        max-width: 250px;
+    }
+    .header-links{
+        display: flex;
+    }
+    .header-links a{
+        display: block;
+        padding: 20px 0 20px 30px;
+        color:#ffffff;
+        font: 22px Lato, sans-serif;
+    }
+    .header-links a:hover{
+        text-decoration: underline;
+    }
+    #mobileheader{
+        display: none;
+    }
     .gridcontainer{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
     h1, h2 {
         font-size: 3em;
     }
-    h3 {
+    h3, .likeh3 {
         font-size: 2em;
     }
     .gridcontainer2{
@@ -292,6 +344,34 @@ article{
     #index-banner-contents{
         display: flex;
         justify-content: space-between;
+    }
+    #filterByGenre {
+        font-size: 1.2em;
+        padding: 13px 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        min-width: 25%;
+    }
+    #searchRecords{
+        display: block;
+        font-size: 1em;
+        padding: 10px 8px;
+        margin:20px 0 5px;
+        width: 30%;
+        
+        /* color: white;
+        background-color: #0F0F0F; */
+        border: solid white 5px;
+    }
+    .filterandsearchcontainer{
+        display: flex;
+        justify-content: space-between;
+    }
+    .detailWrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2em;
+        align-items: start;
     }
   }
   @media (min-width: 1080px) {
@@ -312,15 +392,34 @@ article{
     #index-banner img{
         max-width: 200px;
     }
+    /* #filterByGenre {
+        width: 30%;
+    } */
+    .detailWrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2em;
+        align-items: start;
+    }
+    .detailWrapper img{
+        width: 100%;
+    }
+
+    #albumDetailsContainer{
+        width: 80%;
+    }
 
   }
   @media (min-width: 1280px) {
     .wrapper{
-        max-width: 1280px;
+        max-width: 1260px;
         margin: 0 auto
     }
+    .page{
+        margin: 0 auto;
+    }
     .gridcontainer{
-       margin: 2em 0;
+       margin: 10px 0;
     }
     .gridcontainer2{
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -328,4 +427,8 @@ article{
     #index-banner img{
         max-width: 225px;
     }
+    /* .detailWrapper{
+       margin: 0 auto; 
+       max-width: 1260px;
+    } */
   }
