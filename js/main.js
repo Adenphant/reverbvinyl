@@ -75,46 +75,44 @@ function showDetailView(id) {
       <button onclick="showTracklist()" class="active2 leftButton">Tracklist</button>
       <button onclick="showProductDetails()" class="rightButton">Details</button>
     </div>
-    <div class="detailWrapper">
+    
       <div id="tracklist" >
       <ul>`
     for (let i = 0; i < record.tracks.length; i++) {
       html += /*html*/`
-            <li>${[i + 1]}. ${record.tracks[i]}</li>
+            <p>${[i + 1]}. ${record.tracks[i]}</p>
       `;
     }
+/* 
+  .join() only works if teh accesed key's value is in a form of an array
+ */
     html += /*html*/`
-      </ul>
-      </div>
-      <div id="productDetails">
-        <div class="flex2">
-          <ul id="productKeys">
-            <li>Artist</li>
-            <li>Title</li>
-            <li>Producer(s)</li>
-            <li>Release</li>
-            <li>Duration</li>
-            <li>Genre</li>
-            <li>Style</li>
-            <li>Location</li>
-            <li>Label</li>
-            <li>Condition</li>
-            <li>In Stock</li>
-          </ul>
-          <ul id="productValues">
-            <li>${record.artistName}</li>
-            <li>${record.albumTitle}</li>
-            <li>${record.producers}</li>
-            <li>${record.release}</li>
-            <li>${record.duration}</li>
-            <li>${record.genre}</li>
-            <li>${record.style}</li>
-            <li>${record.location}</li>
-            <li>${record.label}</li>
-            <li>${record.condition}</li>
-            <li>${record.inStock}</li>
-          </ul>
-        </div>
+    </ul>
+    </div>
+    <div id="productDetails">     
+      <div id="productGrid">
+        <p>Artist</p>
+        <p>${record.artistName}</p>
+        <p>Title</p>
+        <p>${record.albumTitle}</p>
+        <p>Producer(s)</p>
+        <p>${record.producers.join(', ')}</p>
+        <p>Release</p>
+        <p>${record.release}</p>
+        <p>Genre</p>
+        <p>${record.genre.join(', ')}</p>
+        <p>Style</p>
+        <p>${record.style.join(', ')}</p>
+        <p>Duration</p>
+        <p>${record.duration}</p>
+        <p>Location</p>
+        <p>${record.location}</p>
+        <p>Label</p>
+        <p>${record.label}</p>
+        <p>Condition</p>
+        <p>${record.condition}</p>
+        <p>In Stock</p>
+        <p>${record.inStock}</p>
       </div>
     </div>
     </div>
@@ -215,59 +213,16 @@ function resetFilterByGenre() {
   document.querySelector("#filterByGenre").value = "all";
 }
 
-
-
-
-
 // HEADER__________
-function myFunction() {
-  // Get the checkbox
-  let checkBox = document.getElementById("menu-toggle");
-  // Get the output text
-  let text = document.getElementById("#header-links-mobile");
-
-  // If the checkbox is checked, display the output text
-  if (checkBox.checked == true){
-    text.style.display = "block";
+// const menu = document.getElementById("header-links-mobile");
+// menu.classList.remove("showMenu");
+function showMobileHeader() {
+  const menu = document.getElementById("header-links-mobile");
+  if (menu.classList.contains("showMenu")){
+    menu.classList.remove("showMenu");
   } else {
-    text.style.display = "none";
+    menu.classList.add("showMenu");
   }
 }
 
-
-// Sort by
-// function orderBy(option){
-//   if(option === "titleA"){
-//     orderByAlbumtitleA();
-//   } 
-//   else if(option === "titleZ"){
-//     orderByAlbumtitleZ();
-//   }
-// }
-
-// function orderByAlbumtitleA(){
-//   _records.sort((a, b) => {
-//     return a.albumTitle.localCompare(b.albumTitle)
-//   });
-//   appendRecords(_records);
-// }
-
-// function orderByAlbumtitleZ(){
-//   _records.sort((record1, record2) => {
-//     return record1.albumTitle.localCompare(record2.albumTitle)
-//   });
-//   appendRecords(_records);
-// }
-// Rap/Hip-Hop, Rock, Electronic, Soul, Jazz, RnB
-// function compareStrings(a, b) {
-//   // Assuming you want case-insensitive comparison
-
-//   return (a < b) ? -1 : (a > b) ? 1 : 0;
-// }
-// function orderByTitle(){
-//   _records.sort((a, b) => {
-//     a = a.toLowerCase();
-//     b = b.toLowerCase();
-//     return a.albumTitle < b.albumTitle ? -1 : a.albumTitle > b.albumTitle ? 1 : 0;
-//   });
-// }
+// document.getElementById("burgermenu").addEventListener("click", showMobileHeader());

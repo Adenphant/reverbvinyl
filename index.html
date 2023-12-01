@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <script type="module" src="js/main.js"></script>
-
-    <title>Document</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Reverb Vinyl - Best Selection of Vinyls</title>
+    <meta name="description" content="Best Selection of Vinyl Records with everything you could ever want"/>
 </head>
 <body onhashchange="pageChange()">
+
     <header>
         <nav class="header wrapper flex">
             <a href="#home" class=""active><img src="image/logo.png" alt="Reverb Vinyl"></a>
@@ -16,31 +19,43 @@
                 <a href="#records">Records</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
+                <div class="flex"><a href="https://www.discogs.com/seller/ReverbVinyl/profile"><img src="image/discogs.png" alt="discogs"></a>
+                    <a href="https://www.facebook.com/reverbvinyl"><img src="image/Icon-facebook.png" alt="facebook"></a></div>
             </div>
         </nav>
+        <div>
         <div id="mobileheader">
-            <a href="#home" class=""active><img src="image/logo.png" alt="Reverb Vinyl"></a>
-            <input id="menu-toggle" type="checkbox" onclick="myFunction()">
-            <label for="menu-toggle">X</label>
+            <a href="#home" active><img src="image/logo.png" alt="Reverb Vinyl"></a>
+            <!-- <input id="menu-toggle" type="checkbox" > -->
+            <button id="burgermenu" onclick="showMobileHeader()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </button>
         </div>
-        <div id="header-links-mobile">
-            <a href="#records">Records</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <ul class="header-links-mobile" id="header-links-mobile">
+                <li><a href="#records" onclick="showMobileHeader()">Records</a></li>
+                <li><a href="#about" onclick="showMobileHeader()">About</a></li>
+                <li><a href="#contact" onclick="showMobileHeader()">Contact</a></li>
+                <li>
+                    <a href="https://www.discogs.com/seller/ReverbVinyl/profile"><img src="image/discogs.png" alt="discogs"></a>
+                    <a href="https://www.facebook.com/reverbvinyl"><img src="image/Icon-facebook.png" alt="facebook"></a>
+                </li>
+            </ul>
         </div>
     </header>
- 
     <main> 
         <div id="home" class="page">
             <div class="index-cover"></div>
+            
             <article id="main-reverb-recommends" class="wrapper">
                     <h1>Reverb Recommends</h1>
-                    <h3>The best vinyl records we have to offer</h3>
+                    <h3>The best Reverb Records</h3><br>
                     <div class="index-albums">
                         <div class="gridcontainer recordsIndex">
                         </div>
                     </div>
-                    <a href="#" class="main-btn">See all</a>
+                    <a href="#records" class="main-btn">See all</a>
                 
             </article>
             <div id="index-banner">
@@ -70,11 +85,11 @@
             </div>
             <article id="reverb-vinyl-index" class="wrapper">
                 <h2>Reverb Vinyls</h2>
-                <div class="flex" id="reverb-vinyl-index-contents">
+                <div class="" id="reverb-vinyl-index-contents">
                     <img src="image/ben1-1.png" alt="">
                     <div>
                         <p>Reverb Vinyls is a record store that values quality and selection. We face every costumer with a smile and always have time for a chat. We either have exactly what you're looking for, or we can find it for you!</p>
-                        <a href="" class="main-btn">Learn More</a>
+                        <a href="#records"><button class="main-btn">Learn More</button></a>
                     </div>
                 </div>
             </article>
@@ -180,11 +195,11 @@
             <div class="footer-section">
                 <h4>Pages</h4>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Records</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li> <a href="">Back to top</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#records">Records</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li> <a href="#">Back to top</a></li>
                 </ul>
             </div>
             <div class="footer-section">

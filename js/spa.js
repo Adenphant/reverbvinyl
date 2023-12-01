@@ -36,6 +36,7 @@ function navigateTo(pageId) {
 // function is called 'onhashchange'
 function pageChange() {
   let page = "home";
+  window.scrollTo(0, 0);
   if (location.hash) {
     page = location.hash.slice(1);
   }
