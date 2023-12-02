@@ -19,6 +19,7 @@ async function initApp() {
     await fetchRecords();
     appendRecords(_records);
     appendRecordsIndex(_records);
+    appendRecordsNew(_records)
 }
 
 initApp();
@@ -26,6 +27,7 @@ initApp();
 // Appending the 8 albums you see on the frontpage (8 albums)__________
 function appendRecordsIndex(records){
   let html = "";
+  
   for (let i = 0; i < 8 && i < records.length; i++) {
     // console.log(records[i]);
     let record = records[i];
@@ -40,6 +42,26 @@ function appendRecordsIndex(records){
     `
 }
   document.querySelector(".recordsIndex").innerHTML = html;
+}
+// Appending the 4 albums you see on the frontpage (New)__________
+function appendRecordsNew(records){
+  let html = "";
+  let hiphop = _records.filter(record => record.genre.includes("Rap/Hip-Hop"))
+  for (let i = 0; i < 4 && i < hiphop.length; i++) {
+    // console.log(records[i]);
+    let record = hiphop[i];
+    html+=`
+    <div class="album">
+      <img src="${record.albumCover}" onclick="showDetailView('${record.id}')" alt="${record.albumTitle}">
+      <div>
+          <strong class="album-title">${record.albumTitle}</strong>
+          <p class="artist-title">${record.artistName}</p>
+      </div>
+    </div>
+    `
+}
+
+  document.querySelector(".recordsIndexNew").innerHTML = html;
 }
 
 // Detail View___________________

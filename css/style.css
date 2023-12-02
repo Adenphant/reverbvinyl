@@ -8,7 +8,7 @@
     font: 'Lato';
 }
 body {
-    background-color: #0F0F0F;
+    background-color: black;
     /* background-color: black; */
     color: #ffffff
 }
@@ -16,6 +16,7 @@ h1, h2{
     font: bold 2em Bitter, serif;
     color: #C2995C;
     text-align: center;
+    margin: 10px 0;
 }
 .likeh1{
     font-weight: 700;
@@ -55,7 +56,7 @@ header {
     left: 0;
     right: 0;
     z-index: 9999;
-    background-color: #0F0F0F;
+    background-color: black
 }
 
 
@@ -106,7 +107,10 @@ article{
     padding: 5em 0;
     margin: 50px 0;
 }
-
+.wrapper{
+    padding-left: 15px;
+    padding-right: 15px;
+}
 /* ---------- page styling ---------- */
 .page {
     display: none;
@@ -119,12 +123,12 @@ article{
 /* Cover image on index.html */
 .index-cover{
     display: block;
-    background-image: url("../image/front2.jpg");
+    background-image: url("../image/front.webp");
     background-size: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    min-height: 90vh;
+    min-height: 80vh;
     height: 90%;
 }
 #main-reverb-recommends{
@@ -154,7 +158,7 @@ article{
     padding-bottom: 2px;
 }
 .artist-title {
-    font: 14px Lato, sans-serif;
+    font: 16px Lato, sans-serif;
 }
 .main-btn{
     margin-top: 50px;
@@ -166,7 +170,7 @@ article{
 /* Index banner */
 #index-banner{
     display: block;
-    background-image: url("../image/ben1-1.png");
+    background-image: url("../image/ben1-1.jpg");
     background-size: cover;
     text-align: center;
     padding: 5em 0;
@@ -175,22 +179,32 @@ article{
     max-width: 150px;
 }
 
-    /* max-width: 1080px;
-    margin: 0 auto; */
-
 #index-banner-contents strong{
     font: bold 1.4em Bitter, serif;
 }
 #index-banner-contents p{
-    font-size: 1.1em;
+    font-size: 1em;
+    
+}
+#index-banner-contents div{
+    margin-bottom: 20px;
 }
 /* Who are we? */
-/* #reverb-vinyl-index img{
-
-} */
 #reverb-vinyl-index-contents div{
     font-size: 1.2em;
     font-weight: 300;
+    text-align: center;
+}
+#reverb-vinyl-index-contents p{
+    margin: 10px 0 30px;
+}
+/* Hip hop classics */
+#hiphop-classics{
+    margin: 0 auto;
+    text-align: center;
+}
+.recordsIndexNew{
+    margin-bottom: 50px;
 }
 
 /* ______Records Page_______ */
@@ -217,7 +231,52 @@ article{
     background-color: #0F0F0F; */
     /* border: solid white 5px; */
 }
+/* ______About page________ */
+#about {
+    display: block;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
 
+#about p {
+    font-weight: 300;
+    margin: 20px 50px 30px;
+}
+#about img{
+    max-width: 750px;
+    width: 100%;
+}
+
+/* ______Contact page________ */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #C2995C;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    border-radius: 5px;
+    padding: 20px;
+  }
 
 /* ______Detail View________ */
 #detailView h1{
@@ -304,6 +363,12 @@ article{
     /* color: white; */
 }
 /* Footer */
+.footer p{
+    margin-bottom: 8px;
+}
+.footer ul li{
+    padding: 7px 0;
+}
 .gridcontainer2{
     display: grid;
     grid-template-columns: 1fr;
@@ -312,6 +377,14 @@ article{
 }
 #map {
     height: 100%;
+}
+.footer-section iframe{
+    max-width: 280px;
+    max-height: 200px;
+}
+.footer-section img{
+    max-width: 280px;
+    max-height: 200px;
 }
 .footer-section{
     /* width: 100%; */
@@ -329,8 +402,9 @@ article{
     margin-right: 2em;
 }
   @media (min-width: 768px) {
+    /* Header */
     .header{
-        padding: 20px 10px 10px;
+        padding: 30px 10px 10px;
         display: flex;
         justify-content: space-between;
         color:#ffffff;
@@ -351,12 +425,13 @@ article{
     .header-links a:hover{
         font-weight: bolder;
     }
-    .page{
-        padding: 120px 0 60px;
-    }
     #mobileheader{
         display: none;
     }
+    .page{
+        padding: 120px 0 60px;
+    }
+    
     .gridcontainer{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
@@ -373,6 +448,7 @@ article{
         text-align: justify;
         padding: 50px 0;
     }
+    /* Front page */
     #index-banner-contents{
         display: flex;
         justify-content: space-between;
@@ -388,6 +464,7 @@ article{
         width: 38%;
         font-size: 1.6em;
     }
+    /* Records */
     #filterByGenre {
         font-size: 1.2em;
         padding: 13px 10px;
@@ -410,11 +487,17 @@ article{
         display: flex;
         justify-content: space-between;
     }
+    /* Detail */
     .detailWrapper{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2em;
         align-items: start;
+    }
+    /* About */
+    #about p {
+        font-size: 1.2em;
+        line-height: 1.2;
     }
   }
   @media (min-width: 1080px) {
@@ -446,12 +529,16 @@ article{
     #albumDetailsContainer{
         width: 80%;
     }
-
+    /* Footer */
+    .footer ul li{
+        padding: 4px 0;
+    }
   }
+  
   @media (min-width: 1280px) {
     .wrapper{
         max-width: 1260px;
-        margin: 0 auto
+        margin: 0 auto;
     }
     .page{
         margin: 0 auto;
@@ -469,4 +556,7 @@ article{
        margin: 0 auto; 
        max-width: 1260px;
     } */
+    .recordsIndexNew{
+        margin-bottom: 50px;
+    }
   }
