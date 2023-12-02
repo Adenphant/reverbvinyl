@@ -16,7 +16,6 @@ h1, h2{
     font: bold 2em Bitter, serif;
     color: #C2995C;
     text-align: center;
-    margin: 10px 0;
 }
 .likeh1{
     font-weight: 700;
@@ -104,7 +103,7 @@ header {
 /* Main______________________ */
 article{
     display: block;
-    padding: 5em 0;
+    padding: 2em 0;
     margin: 50px 0;
 }
 .wrapper{
@@ -123,12 +122,12 @@ article{
 /* Cover image on index.html */
 .index-cover{
     display: block;
-    background-image: url("../image/front.webp");
+    background-image: url("../image/front2.webp");
     background-size: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    min-height: 80vh;
+    min-height: 85vh;
     height: 90%;
 }
 #main-reverb-recommends{
@@ -151,6 +150,10 @@ article{
     /* padding: 2em 1em; */
     text-align: left;
 }
+.album img{
+    width: 100%;
+    height: auto;
+}
 .album-title {
     display: block;
     font: 16px Lato, sans-serif;
@@ -170,7 +173,7 @@ article{
 /* Index banner */
 #index-banner{
     display: block;
-    background-image: url("../image/ben1-1.jpg");
+    background-image: url("../image/ben1-1.webp");
     background-size: cover;
     text-align: center;
     padding: 5em 0;
@@ -428,10 +431,14 @@ input[type=text], select, textarea {
     #mobileheader{
         display: none;
     }
+    /* Pages */
     .page{
         padding: 120px 0 60px;
     }
-    
+    article{
+        display: block;
+        padding: 5em 0;
+    }
     .gridcontainer{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
