@@ -6,15 +6,14 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="/image/favicon.jpg">
     <link rel="preload" fetchpriority="high" as="image" href="image/front2.webp" type="image/webp">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Reverb Vinyl - Best Selection of Vinyl Records</title>
-    <meta name="description" content="Best Selection of Vinyl Records with everything you could ever want"/>
+    <meta name="description" content="Best Selection of Vinyl Records with everything you could ever want">
 </head>
 <body onhashchange="pageChange()">
 
     <header>
         <nav class="header wrapper flex">
-            <a href="#home" class=""active><img src="image/logo.png" alt="Reverb Vinyl"></a>
+            <a href="#home" class=""><img src="image/logo.png" alt="Reverb Vinyl"></a>
             <div class="header-links">
                 <a href="#records">Records</a>
                 <a href="#about">About</a>
@@ -25,13 +24,13 @@
         </nav>
         <div>
         <div id="mobileheader">
-            <a href="#home" active><img src="image/logo.png" alt="Reverb Vinyl"></a>
+            <a href="#home"><img src="image/logo.png" alt="Reverb Vinyl"></a>
             <!-- <input id="menu-toggle" type="checkbox" > -->
-            <button id="burgermenu" aria-label="Menu button" onclick="showMobileHeader()">
+            <div id="burgermenu" onclick="showMobileHeader()">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
-            </button>
+            </div>
         </div>
             <ul class="header-links-mobile" id="header-links-mobile">
                 <li><a href="#records" onclick="showMobileHeader()">Records</a></li>
@@ -88,7 +87,7 @@
                     <img src="image/ben1-1.webp" alt="store-image">
                     <div>
                         <p>Reverb Vinyls is a record store that values quality and selection. We face every costumer with a smile and always have time for a chat. We either have exactly what you're looking for, or we can find it for you!</p>
-                        <a href="#about"class="main-btn">Learn More</a>
+                        <a href="#about" class="main-btn">Learn More</a>
                     </div>
                 </div>
             </article>
@@ -100,15 +99,8 @@
         </div>
         <div id="records" class="page wrapper">
             <h2>Records</h2>
-            <!-- <label for="sortBy">
-                <select id="sortBy" onchange="orderBy(this.value)">
-                    <option value="" selected >Sort by</option>
-                    <option value="titleA">Title A-Z</option>
-                    <option value="titleZ">Title Z-A</option>
-                </select>
-            </label> -->
             <div class="filterandsearchcontainer">
-            <input id="searchRecords" type="search" placeholder="Search" onkeyup="search(this.value)" onsearch="search('')">
+            <input id="searchRecords" type="search" placeholder="Search" onkeyup="search(this.value)">
             <label for="filterByGenre">
                 <select id="filterByGenre"  onchange="filterByGenre(this.value)">
                     <option value="all" selected >All Genres</option>
@@ -122,14 +114,12 @@
                 </select>
             </label>
             </div>
-            <section class="records gridcontainer"></section>
+            <div class="records gridcontainer"></div>
         </div>
         <div id="about" class="page wrapper">
-          
             <h2>About us</h2>
             <p>After many years of collecting and trading vinyl and cd’s on a purely hobby basis, 2017 became the year to make the dream come true. Our new store in AArhus is concentrated around new and rare second hand vinyl with a special interest in rock subcats like indie , alternative, grunge, hardcore, punk, new wave, synth, electronic and industrial. We love listening to and talking about music and we will strive to bring a cozy and relaxed atmosphere to the shop for our customers to enjoy.</p>
             <img src="image/atdesk.webp" alt="reverb store">
-  
         </div>
         <div id="contact" class="page wrapper">
             <h2>Contact us</h2>

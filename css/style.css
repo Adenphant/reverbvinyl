@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-    font: 'Lato';
 }
 body {
     background-color: black;
@@ -80,10 +79,11 @@ header {
     height: 3px;
     border-radius: 10px;
     background-color: white;
-    &:not(:first-child){
     margin: 8px 0;
-    
-}}
+}
+#burgermenu div:first-child{
+    margin: 0 0;
+}
 
 .header-links-mobile{
     display: none;
@@ -350,9 +350,9 @@ input[type=text], select, textarea {
 }
 #productGrid p{
     margin: 0;
-    &:nth-child(odd){
-        font-weight: 500;
-    }
+}
+#productGrid p:nth-child(odd){
+    font-weight: 500;
 }
 #tracklist p{
     font-weight: 500;
