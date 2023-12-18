@@ -2,7 +2,6 @@
 
 /* ---------- Global Variables ---------- */
 let _records = [];
-let frontpageRecords = [];
 let page = 0;
 
 // Fetching the data from our JSON file
@@ -43,7 +42,7 @@ function appendRecordsIndex(records){
 }
   document.querySelector(".recordsIndex").innerHTML = html;
 }
-// Appending the 4 albums you see on the frontpage (New)__________
+// Appending the 4 hip hop albums you see on the frontpage (New)__________
 function appendRecordsNew(records){
   let html = "";
   let hiphop = _records.filter(record => record.genre.includes("Rap/Hip-Hop"))
@@ -64,7 +63,7 @@ function appendRecordsNew(records){
   document.querySelector(".recordsIndexNew").innerHTML = html;
 }
 
-// Detail View___________________
+// Detail View, her er koden der anvendes når de enkelte produkt sider skal vises
 function showDetailView(id) {
   const record = _records.find(record => record.id == id);
   let html = "";
@@ -162,7 +161,7 @@ function showDetailView(id) {
   document.querySelector("#detailView").innerHTML = html;
   navigateTo("detailView");
 }
-
+// Detalje og tracklist elementerne på produktsiden
 // Show tracklist if hidden
 function showTracklist(){
   console.log("tracklist button");
@@ -204,7 +203,7 @@ function appendRecords(records) {
   document.querySelector(".records").innerHTML = html;
 }
 
-// Filter by Genre
+// Filtreringen af genre på records siden
 function filterByGenre(genre) {
   // resetFilterByEnrollment();
   if (genre === "all") {
@@ -215,7 +214,7 @@ function filterByGenre(genre) {
   }
 }
 
-// Search by genre and artist
+// Søge funktionen på records siden
 function search(value) {
   resetFilterByGenre();
   value = value.toLowerCase();
@@ -230,14 +229,12 @@ function search(value) {
   appendRecords(results);
 }
 
-//reset array
+//reset genre filtreringen
 function resetFilterByGenre() {
   document.querySelector("#filterByGenre").value = "all";
 }
 
-// HEADER__________
-// const menu = document.getElementById("header-links-mobile");
-// menu.classList.remove("showMenu");
+// Vis og skjul mobilmenu
 function showMobileHeader() {
   const menu = document.getElementById("header-links-mobile");
   if (menu.classList.contains("showMenu")){
