@@ -1,6 +1,6 @@
 "use strict";
 
-// hide all pages
+// skjul alle pages/sider
 function hideAllPages() {
   let pages = document.querySelectorAll(".page");
   for (let page of pages) {
@@ -8,32 +8,19 @@ function hideAllPages() {
   }
 }
 
-// show page or tab
+// hvis page/side
 function showPage(pageId) {
   hideAllPages();
   document.querySelector(`#${pageId}`).style.display = "block";
-  setActiveTab(pageId);
 }
 
-// sets active tabbar/ menu item
-function setActiveTab(pageId) {
-  let pages = document.querySelectorAll(".tabbar a");
-  for (let page of pages) {
-    if (`#${pageId}` === page.getAttribute("href")) {
-      page.classList.add("active");
-    } else {
-      page.classList.remove("active");
-    }
-  }
-}
-
-// navigate to a new view/page by changing href
+// naviger til et ny view/page vha location.href
 function navigateTo(pageId) {
   location.href = `#${pageId}`;
 }
 
-// set default page or given page by the hash url
-// function is called 'onhashchange'
+// Sætter den den side du vil vise når du åbner hjemmesiden
+// funktionen 'onhashchange' bliver kaldt på body, og tilgår denne funktion
 function pageChange() {
   let page = "home";
   window.scrollTo(0, 0);
@@ -43,4 +30,4 @@ function pageChange() {
   showPage(page);
 }
 
-pageChange(); // called by default when the app is loaded for the first time
+pageChange(); // kalder funktioen når siden bliver loadet

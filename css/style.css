@@ -149,6 +149,7 @@ article{
     /* width: 23%; */
     /* padding: 2em 1em; */
     text-align: left;
+    cursor:pointer;
 }
 .album img{
     width: 100%;

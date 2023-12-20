@@ -1,10 +1,10 @@
 "use strict";
 
-/* ---------- Global Variables ---------- */
+/* ---------- Globale Variabler ---------- */
 let _records = [];
 let page = 0;
 
-// Fetching the data from our JSON file
+// Fetching data fra JSON filen
 async function fetchRecords() {
   // const url = "json/records.json";
   const response = await fetch('json/records.json');
@@ -23,7 +23,7 @@ async function initApp() {
 
 initApp();
 
-// Appending the 8 albums you see on the frontpage (8 albums)__________
+// Indsætter de 8 albums du ser på forsiden__________
 function appendRecordsIndex(records){
   let html = "";
   
@@ -42,7 +42,7 @@ function appendRecordsIndex(records){
 }
   document.querySelector(".recordsIndex").innerHTML = html;
 }
-// Appending the 4 hip hop albums you see on the frontpage (New)__________
+// Indsætter de 4 hip hop albums du ser på forsiden__________
 function appendRecordsNew(records){
   let html = "";
   let hiphop = _records.filter(record => record.genre.includes("Rap/Hip-Hop"))
