@@ -414,7 +414,7 @@ input[type=text], select, textarea {
         color:#ffffff;
         
     }
-    .header img{
+    .header img{ 
         max-width: 250px;
     }
     .header-links{
