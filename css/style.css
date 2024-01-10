@@ -40,6 +40,11 @@ a {
 a:hover {
     font-weight: bolder;
 }
+.main-btn:hover {
+    font: light 20px Bitter, serif;
+    background-color: #0F0F0F;
+    color: #C2995C;;
+}
 .flex{
     display: flex;
     justify-content: space-between;
@@ -170,6 +175,7 @@ article{
     font: bold 20px Bitter, serif;
     background-color: #C2995C;
     color: #0F0F0F;
+    border: 2px solid #C2995C;
 }
 /* Index banner */
 #index-banner{
