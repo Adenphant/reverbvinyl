@@ -155,10 +155,15 @@ article{
     /* padding: 2em 1em; */
     text-align: left;
     cursor:pointer;
+    transition: transform .2s; /* Animation */
 }
 .album img{
     width: 100%;
     height: auto;
+    transition: transform .2s; /* Animation */
+}
+.album:hover{
+    transform: scale(1.05);
 }
 .album-title {
     display: block;
@@ -311,7 +316,7 @@ input[type=text], select, textarea {
 
 #detailPrice{
     font-size: 1.8em;
-    margin: 0.5em 0 0.5em;
+    margin: 0.5em 0 0.8em;
     font-weight: 400;
 }
 .red {color: red;}
